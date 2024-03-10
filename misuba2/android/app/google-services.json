@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "542782594602",
+    "project_id": "miscuba-f5860",
+    "storage_bucket": "miscuba-f5860.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:542782594602:android:442ab2a825855fef3aed53",
+        "android_client_info": {
+          "package_name": "com.example.misuba2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZE5r0Rvlx63D9pQdm6t66evmCBIxhgzY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
