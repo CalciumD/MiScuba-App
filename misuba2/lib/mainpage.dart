@@ -53,6 +53,7 @@ class _MainPageStates extends State<MainPage> {
 
   // Pub.dev documentation
   Future<void> _getWeather() async {
+    // Weather API FREE
     WeatherFactory wf = WeatherFactory("8b8983249c5c386881c3690b181ec2f9");
     Position p = await _getCurrentLocation();
     Weather w = await wf.currentWeatherByLocation(p.latitude, p.longitude);
