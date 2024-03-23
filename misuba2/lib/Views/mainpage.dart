@@ -4,8 +4,8 @@ import 'package:geolocator/geolocator.dart';
 import 'package:location/location.dart';
 import 'package:misuba2/Views/apneapage.dart';
 import 'package:misuba2/Views/freedivpage.dart';
-import 'package:misuba2/loginpage.dart';
 import 'package:audioplayers/audioplayers.dart';
+import 'package:misuba2/Views/loginpage.dart';
 import 'package:misuba2/Views/scubapage.dart';
 import 'package:weather/weather.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -141,11 +141,13 @@ class _MainPageStates extends State<MainPage> {
                     children: [
                       Text(
                         '${_currentWeather?.weatherDescription}',
-                        style: const TextStyle(fontSize: 24, color: Colors.white),
+                        style:
+                            const TextStyle(fontSize: 24, color: Colors.white),
                       ),
                       Text(
                         '${_currentWeather?.temperature?.celsius?.toStringAsFixed(2)}°C',
-                        style: const TextStyle(fontSize: 24, color: Colors.white),
+                        style:
+                            const TextStyle(fontSize: 24, color: Colors.white),
                       )
                     ],
                   ),
@@ -159,11 +161,13 @@ class _MainPageStates extends State<MainPage> {
                     children: [
                       Text(
                         '${_currentWeather?.areaName}, ${_currentWeather?.country}',
-                        style: const TextStyle(fontSize: 14, color: Colors.white),
+                        style:
+                            const TextStyle(fontSize: 14, color: Colors.white),
                       ),
                       Text(
                         'Humidity: ${_currentWeather?.humidity}',
-                        style: const TextStyle(fontSize: 14, color: Colors.white),
+                        style:
+                            const TextStyle(fontSize: 14, color: Colors.white),
                       ),
                     ],
                   ),
@@ -194,7 +198,10 @@ class _MainPageStates extends State<MainPage> {
               child: StreamBuilder(
                 // THIS PART WAS HELPED BY COPILOT
                 // FirebaseFirestore.instance.collection("Test").snapshots(),
-                stream: FirebaseFirestore.instance.collection(uuid!).orderBy('date').snapshots(),
+                stream: FirebaseFirestore.instance
+                    .collection(uuid!)
+                    .orderBy('date')
+                    .snapshots(),
                 // THIS PART WAS HELPED BY COPILOT
                 builder: (context, snapshot) {
                   // Get Data
@@ -212,10 +219,14 @@ class _MainPageStates extends State<MainPage> {
                     itemCount: docs.length,
                     itemBuilder: (context, index) {
                       return Dismissible(
-                        key: Key(docs[index].id), // Use unique key for each item
+                        key:
+                            Key(docs[index].id), // Use unique key for each item
                         onDismissed: (direction) {
                           // Remove the item from the Firestore collection
-                          FirebaseFirestore.instance.collection(uuid!).doc(docs[index].id).delete();
+                          FirebaseFirestore.instance
+                              .collection(uuid!)
+                              .doc(docs[index].id)
+                              .delete();
                         },
                         background: Container(
                           color: Colors.red,
@@ -226,7 +237,8 @@ class _MainPageStates extends State<MainPage> {
                         child: Container(
                           height: 60,
                           color: const Color(0xff6495ed),
-                          margin: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+                          margin: const EdgeInsets.symmetric(
+                              vertical: 10.0, horizontal: 10.0),
                           alignment: Alignment.center,
                           child: Text(
                             '${docs[index]['type']}: ${docs[index]['date']}',

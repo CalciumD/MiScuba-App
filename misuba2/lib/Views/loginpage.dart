@@ -1,9 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:localstorage/localstorage.dart';
+import 'package:misuba2/Views/mainpage.dart';
+import 'package:misuba2/Views/registerpage.dart';
 import 'package:misuba2/firebase_auth_services.dart/firebase_auth_service.dart';
-import 'package:misuba2/mainpage.dart';
-import 'package:misuba2/registerpage.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -81,7 +81,8 @@ class _LoginPageStates extends State<LoginPage> {
             ),
             // PASSWORD INPUT
             Padding(
-              padding: const EdgeInsets.only(left: 15.0, right: 15.0, top: 15, bottom: 0),
+              padding: const EdgeInsets.only(
+                  left: 15.0, right: 15.0, top: 15, bottom: 0),
               child: TextField(
                 style: const TextStyle(color: Colors.white),
                 controller: _passwordController,

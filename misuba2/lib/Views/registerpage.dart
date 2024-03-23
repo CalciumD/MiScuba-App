@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:misuba2/Views/loginpage.dart';
+import 'package:misuba2/Views/mainpage.dart';
 import 'package:misuba2/firebase_auth_services.dart/firebase_auth_service.dart';
-import 'package:misuba2/loginpage.dart';
-import 'package:misuba2/mainpage.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});
@@ -77,7 +77,8 @@ class _RegisterPageStates extends State<RegisterPage> {
             ),
             // CONFIRM EMAIL ADDRESS TWO
             Padding(
-              padding: const EdgeInsets.only(left: 20.0, right: 20.0, top: 20, bottom: 0),
+              padding: const EdgeInsets.only(
+                  left: 20.0, right: 20.0, top: 20, bottom: 0),
               child: TextField(
                 style: const TextStyle(color: Colors.white),
                 controller: _emailController,
@@ -90,7 +91,8 @@ class _RegisterPageStates extends State<RegisterPage> {
             ),
             //  PASSWORD ONE
             Padding(
-              padding: const EdgeInsets.only(left: 20.0, right: 20.0, top: 20, bottom: 0),
+              padding: const EdgeInsets.only(
+                  left: 20.0, right: 20.0, top: 20, bottom: 0),
               child: TextField(
                 style: const TextStyle(color: Colors.white),
                 controller: _passwordController,
@@ -134,8 +136,8 @@ class _RegisterPageStates extends State<RegisterPage> {
               padding: const EdgeInsets.all(8.0),
               child: TextButton(
                 onPressed: () {
-                  Navigator.pushReplacement(
-                      context, MaterialPageRoute(builder: (_) => const LoginPage()));
+                  Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (_) => const LoginPage()));
                 },
                 child: const Text(
                   'Login In',
