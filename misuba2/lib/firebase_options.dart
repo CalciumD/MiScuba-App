@@ -47,29 +47,29 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyD_p4JYaHulnn8m4ZHgzXYTI7aivaQ4OgQ',
-    appId: '1:542782594602:web:e749973c752f11953aed53',
+    apiKey: '',
+    appId: '',
     messagingSenderId: '542782594602',
     projectId: 'miscuba-f5860',
-    authDomain: 'miscuba-f5860.firebaseapp.com',
-    storageBucket: 'miscuba-f5860.appspot.com',
+    authDomain: '',
+    storageBucket: '',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBZE5r0Rvlx63D9pQdm6t66evmCBIxhgzY',
-    appId: '1:542782594602:android:442ab2a825855fef3aed53',
+    apiKey: '',
+    appId: '',
     messagingSenderId: '542782594602',
     projectId: 'miscuba-f5860',
-    storageBucket: 'miscuba-f5860.appspot.com',
+    storageBucket: '',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDHxYhfZhmVvI6f-p1mImiaiYiCQTFnQjQ',
-    appId: '1:542782594602:ios:0009466bf287b9f23aed53',
+    apiKey: '',
+    appId: '',
     messagingSenderId: '542782594602',
     projectId: 'miscuba-f5860',
-    storageBucket: 'miscuba-f5860.appspot.com',
-    iosBundleId: 'com.example.misuba2',
+    storageBucket: '',
+    iosBundleId: '',
   );
 }
 
